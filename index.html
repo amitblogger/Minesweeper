@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Minesweeper</h1>
+    <div id="difficulty">
+      <label for="level">Difficulty:</label>
+      <select id="level">
+        <option value="easy">Easy (8x8, 10 mines)</option>
+        <option value="medium">Medium (10x10, 15 mines)</option>
+        <option value="hard">Hard (12x12, 20 mines)</option>
+      </select>
+    </div>
+    <div id="header">
+      <span id="mines-left">Mines Left: 10</span>
+      <span id="smiley" onclick="resetGame()">😊</span>
+      <span id="timer">Time: 0s</span>
+    </div>
+    <div class="board" id="board"></div>
+    <p id="status"></p>
+    <div id="controls">
+      <button id="new-game">New Game</button>
+    </div>
+    <p id="best-time">Best Time: Not set</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
